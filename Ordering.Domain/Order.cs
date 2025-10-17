@@ -1,4 +1,4 @@
-﻿namespace OrderService.Domain;
+﻿namespace Ordering.Domain;
 
 public class Order
 {

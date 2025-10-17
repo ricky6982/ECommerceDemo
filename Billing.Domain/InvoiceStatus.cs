@@ -1,4 +1,4 @@
-﻿namespace BillingService.Domain;
+﻿namespace Billing.Domain;
 
 public enum InvoiceStatus
 {

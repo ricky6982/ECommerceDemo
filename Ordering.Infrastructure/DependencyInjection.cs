@@ -2,16 +2,17 @@
 using Microsoft.Extensions.DependencyInjection;
 using Shared.Infrastructure.MassTransit;
 
-namespace BillingService.Infrastructure;
+namespace Ordering.Infrastructure;
 
 public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
+        // Configuración de MassTransit para este microservicio
         services.AddMassTransit(x =>
         {
             x.AddConsumers(typeof(DependencyInjection).Assembly);
-            x.AddDefaultRabbitMq();
+            x.AddDefaultRabbitMq(); // usa el helper compartido
         });
 
         return services;
