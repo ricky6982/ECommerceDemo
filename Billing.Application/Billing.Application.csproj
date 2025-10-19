@@ -7,12 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MassTransit" Version="8.5.4" />
+      <PackageReference Include="MassTransit.Abstractions" Version="8.5.4" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Billing.Application\Billing.Application.csproj" />
-      <ProjectReference Include="..\Shared.Infrastructure\Shared.Infrastructure.csproj" />
+      <ProjectReference Include="..\Billing.Domain\Billing.Domain.csproj" />
       <ProjectReference Include="..\Shared.Messaging\Shared.Messaging.csproj" />
     </ItemGroup>
 
