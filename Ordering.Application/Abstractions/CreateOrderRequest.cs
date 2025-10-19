@@ -1,8 +1,9 @@
-﻿namespace Ordering.Application.Abstractions;
+﻿using System.Collections.Immutable;
 
-public record CreateOrderRequest
-{
-    public string CustomerEmail;
-    public List<OrderItemDto> Items;
-    public decimal Discount;
-}
+namespace Ordering.Application.Abstractions;
+
+public record CreateOrderRequest(
+    string CustomerEmail,
+    ImmutableList<OrderItemDto> Items,
+    decimal Discount
+);

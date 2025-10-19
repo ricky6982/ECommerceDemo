@@ -1,4 +1,6 @@
-﻿using MassTransit;
+﻿using Billing.Application;
+using Billing.Application.Consumers;
+using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Shared.Infrastructure.MassTransit;
 
@@ -10,7 +12,7 @@ public static class DependencyInjection
     {
         services.AddMassTransit(x =>
         {
-            x.AddConsumers(typeof(DependencyInjection).Assembly);
+            x.AddConsumers(typeof(BillingService).Assembly);
             x.AddDefaultRabbitMq();
         });
 
