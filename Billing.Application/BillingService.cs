@@ -11,8 +11,8 @@ public class BillingService : IBillingService
         var seconds = random.Next(1, 10) * 1000;
         
         Thread.Sleep(seconds);
-        Console.WriteLine($"Time elapsed: {seconds} seconds.");
-        Console.WriteLine($"Billing for Order {messageOrderId} has been created.");
+        Console.WriteLine($"    - Time elapsed: {seconds} seconds.");
+        Console.WriteLine($"    - Billing for Order {messageOrderId} has been created.");
         
         return Task.CompletedTask;
     }

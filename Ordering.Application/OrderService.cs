@@ -44,7 +44,7 @@ public class OrderService : IOrderService
         // Publish the processed order event
         var e = new OrderSubmitted(orderId, order.CustomerEmail, order.Total);
         await _publishEndpoint.Publish(e);
-        Console.WriteLine("The order has been published.");
+        Console.WriteLine($"The order with id '{orderId}' has been published.");
 
         return orderId;
     }
